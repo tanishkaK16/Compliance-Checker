@@ -1,1 +1,13 @@
-{"status": "not_started"}
+{
+  "run_id": "run_4",
+  "status": "complete",
+  "steps_completed": [
+    "scrape",
+    "diff",
+    "rag_map",
+    "amend",
+    "report",
+    "evolve"
+  ],
+  "duration_seconds": 0.09
+}

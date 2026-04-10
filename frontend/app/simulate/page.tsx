@@ -77,7 +77,7 @@ export default function SimulatePage() {
           </div>
 
           <button 
-            disabled={!file || isUploading}
+            disabled={isUploading}
             onClick={handleStartSimulation}
             className="w-full linear-button-primary h-14 text-base group"
           >
