@@ -1,6 +1,6 @@
 {
-  "run_id": "run_1",
-  "timestamp": "2026-04-10T16:30:04.564780",
+  "run_id": "run_3",
+  "timestamp": "2026-04-10T19:36:13.276812",
   "circular_source": "RBI/2026/41",
   "summary": "1 clause change(s) detected affecting internal policy and product catalog.",
   "risk_level": "high",
@@ -14,7 +14,16 @@
       "risk": "high",
       "affected_document": "internal_policy.pdf",
       "affected_section": "Section 1",
-      "amendment": "Update Section 1 to comply with RBI circular 2026/41. Specifically: \u012f ______________________ RESERVE BANK OF INDIA________________________ www.rbi.org.in \u036a \u036a \u036a, \u0223 ,10 , \u0223 , \u0223 \u0367 , . 10014, -400001 Financial Inclusion & Development Dept, Central Office,10th Floor, Centr"
+      "amendment": "Update Section 1 to comply with RBI circular 2026/41. Specifically: \u012f ______________________ RESERVE BANK OF INDIA________________________ www.rbi.org.in \u036a \u036a \u036a, \u0223 ,10 , \u0223 , \u0223 \u0367 , . 10014, -400001 Financial Inclusion & Development Dept, Central Office,10th Floor, Centr",
+      "trace_reference": {
+        "trace_id": "TRC-RBI-26-41-RUN_3-C5A9",
+        "circular_reference": "RBI/2026/41",
+        "circular_section": "Section 1",
+        "affected_document": "internal_policy.pdf",
+        "affected_section": "Section 1",
+        "timestamp": "2026-04-10T19:36:13.276804",
+        "status": "pending_review"
+      }
     }
   ],
   "fine_risk": {
