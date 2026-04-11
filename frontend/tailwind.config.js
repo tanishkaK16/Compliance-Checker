@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#080808", // neutral-950
-        foreground: "#FFFFFF", // neutral-50
+        background: "#0b0c0f",
+        foreground: "#f3f4f6",
         neutral: {
-          950: "#080808",
+          950: "#0b0c0f",
           900: "#111111",
           800: "#1e1e1e",
           700: "#2e2e2e",
@@ -30,9 +30,9 @@ module.exports = {
           low: "#FFFFFF",
         },
         text: {
-          primary: "#FFFFFF",
-          secondary: "#FFFFFF", // Override grey with white
-          muted: "#FFFFFF", // Also override muted with white for dashboard
+          primary: "#f3f4f6",
+          secondary: "#d1d5db",
+          muted: "#9ca3af",
         }
       },
       letterSpacing: {

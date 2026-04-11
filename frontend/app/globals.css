@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #080808;
-  --foreground: #ffffff;
+  --background: #0b0c0f;
+  --foreground: #f3f4f6;
 }
 
 body {
@@ -18,33 +18,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 @layer components {
   .linear-card {
-    background-color: #111111;
-    border: 1px solid #1e1e1e;
+    background-color: #13151a;
+    border: 1px solid #1f2229;
     border-radius: 8px;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .linear-card-hover:hover {
-    background-color: #141414;
-    border-color: #2e2e2e;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color: #1a1d24;
+    border-color: #2b303b;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
   }
 
   .linear-button-primary {
     height: 38px;
     padding-left: 16px;
     padding-right: 16px;
-    background-color: #ffffff;
-    color: #080808;
+    background-color: #f3f4f6;
+    color: #050608;
     font-weight: 500;
     border-radius: 6px;
     font-size: 14px;
@@ -55,9 +60,9 @@ h1, h2, h3, h4, h5, h6 {
     gap: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .linear-button-primary:hover {
-    background-color: #f4f4f5;
+    background-color: #ffffff;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
   }
@@ -66,9 +71,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 38px;
     padding-left: 16px;
     padding-right: 16px;
-    background-color: rgba(255, 255, 255, 0.04);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #1f2229;
+    color: #f3f4f6;
+    border: 1px solid #2b303b;
     font-weight: 500;
     border-radius: 6px;
     font-size: 14px;
@@ -78,10 +83,10 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     gap: 8px;
   }
-  
+
   .linear-button-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    background-color: #2b303b;
+    border-color: #374151;
   }
 
   .text-reveal-mask {
@@ -89,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .text-gradient-white {
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: linear-gradient(180deg, #f3f4f6 0%, rgba(243, 244, 246, 0.6) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -120,27 +125,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Linear Grid Background */
 .linear-grid {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(243, 244, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 244, 246, 0.03) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
 .mask-fade-bottom {
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgba(5, 6, 8, 1) 50%, transparent 100%);
 }
 
 .mask-fade-top {
-  mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  mask-image: linear-gradient(to top, rgba(5, 6, 8, 1) 50%, transparent 100%);
 }
 
 @media print {
   .no-print {
     display: none !important;
   }
-  
+
   body {
-    background: white !important;
-    color: black !important;
+    background: #f3f4f6 !important;
+    color: #050608 !important;
   }
 }

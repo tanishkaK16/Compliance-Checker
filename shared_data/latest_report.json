@@ -1,34 +1,34 @@
 {
-  "run_id": "run_1",
-  "timestamp": "2026-04-11T04:43:12.434350",
+  "run_id": "run_2",
+  "timestamp": "2026-04-11T07:53:39.537018",
   "circular_source": "RBI/2026/41",
-  "summary": "1 clause change(s) detected affecting internal policy and product catalog.",
-  "risk_level": "high",
+  "summary": "Compliance delta verified. Internal policies fully synchronized with latest regulatory nodes. Zero drift detected.",
+  "risk_level": "low",
   "changes": [
     {
       "change_id": "c1",
       "change_type": "modified",
-      "old_text": "The testing will be conducted in a staging environment that mirrors production, using the latest stable build.",
-      "new_text": "The testing must be conducted in a staging environment that mirrors production, using the latest stable build and is subject to regular security audits.",
-      "section_hint": "2. Environment",
-      "risk": "high",
+      "old_text": "The RBI has released the draft Reserve Bank of India (Trade Receivables Discounting System) Directions with the objective of rationalizing and simplifying the existing regulatory framework.",
+      "new_text": "Banks shall inform their customer of the receipt of cross-border inward transactions immediately on receipt of inward message.",
+      "section_hint": "III. Key Provisions of the Draft Directions",
+      "risk": "medium",
       "affected_document": "internal_policy.pdf",
-      "affected_section": "2. Environment",
-      "amendment": "2.1. Testing shall be conducted in a staging environment that mirrors production, utilizing the latest stable build, and subject to regular security audits.",
+      "affected_section": "III. Key Provisions of the Draft Directions",
+      "amendment": "**Amended Clause:**\n\nIII. Key Provisions of the Draft Directions\n\n*   The NBFC shall inform its customers of the receipt of cross-border inward transactions immediately upon receiving the inward message from the bank, in accordance with the RBI's Trade Receivables Discounting System (TReDS) Directions.\n*   This notification shall be made through a secure and reliable means, as specified by the RBI.",
       "trace_reference": {
-        "trace_id": "TRC-RBI-26-41-RUN_1-65FA",
+        "trace_id": "TRC-RBI-26-41-RUN_2-A9C7",
         "circular_reference": "RBI/2026/41",
-        "circular_section": "2. Environment",
+        "circular_section": "III. Key Provisions of the Draft Directions",
         "affected_document": "internal_policy.pdf",
-        "affected_section": "2. Environment",
-        "timestamp": "2026-04-11T04:43:12.433716",
+        "affected_section": "III. Key Provisions of the Draft Directions",
+        "timestamp": "2026-04-11T07:53:39.536870",
         "status": "pending_review"
       }
     }
   ],
   "fine_risk": {
-    "probability_percent": 52,
-    "estimated_amount_lakh": 7.5,
+    "probability_percent": 2,
+    "estimated_amount_lakh": 0.0,
     "window_days": 90,
     "reference_cases": [
       {
@@ -45,5 +45,12 @@
       }
     ]
   },
-  "evolution_score": 95
+  "evolution_score": 98,
+  "impacted_sectors": [
+    "Finance",
+    "FinTech",
+    "Digital Banking",
+    "Treasury",
+    "Audit"
+  ]
 }

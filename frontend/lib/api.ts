@@ -56,16 +56,19 @@ export interface RunStatus {
 export async function runComplianceCheck(file?: File | null) {
   console.log("[API] Initiating compliance check with file payload:", file ? file.name : "None");
   try {
-    const formData = new FormData();
+    console.log("[API] Dispatching POST /run_compliance_crew...");
+    
+    let fetchOptions: RequestInit = {
+      method: "POST",
+    };
+
     if (file) {
+      const formData = new FormData();
       formData.append("file", file);
+      fetchOptions.body = formData;
     }
 
-    console.log("[API] Dispatching POST /run_compliance_crew...");
-    const response = await fetch(`${API_URL}/run_compliance_crew`, {
-      method: "POST",
-      body: formData,
-    });
+    const response = await fetch(`${API_URL}/run_compliance_crew`, fetchOptions);
     
     if (!response.ok) {
       const errText = await response.text();

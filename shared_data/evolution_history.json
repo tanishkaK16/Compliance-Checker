@@ -3,8 +3,15 @@
     {
       "run_id": "run_1",
       "score": 95,
-      "timestamp": "2026-04-11T04:43:12.434350",
+      "timestamp": "2026-04-11T07:28:15.679908",
       "risk_level": "high",
+      "changes_count": 1
+    },
+    {
+      "run_id": "run_2",
+      "score": 98,
+      "timestamp": "2026-04-11T07:53:39.537018",
+      "risk_level": "low",
       "changes_count": 1
     }
   ]

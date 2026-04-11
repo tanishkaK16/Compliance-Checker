@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import OnboardingForm from "./OnboardingForm";
-import { usePathname } from "next/navigation";
 
 export default function ProfileManager() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [initialData, setInitialData] = useState<any>(null);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const checkProfile = () => {
@@ -36,11 +37,24 @@ export default function ProfileManager() {
 
   if (!showOnboarding) return null;
 
+  const hasProfile = !!localStorage.getItem("userProfile");
+
+  const handleClose = () => {
+    if (hasProfile) {
+      // Existing profile — just close the modal
+      setShowOnboarding(false);
+    } else {
+      // No profile — safely escape to landing page
+      setShowOnboarding(false);
+      router.push("/");
+    }
+  };
+
   return (
     <OnboardingForm 
       onComplete={() => setShowOnboarding(false)} 
       initialData={initialData}
-      onClose={localStorage.getItem("userProfile") ? () => setShowOnboarding(false) : undefined}
+      onClose={handleClose}
     />
   );
 }
